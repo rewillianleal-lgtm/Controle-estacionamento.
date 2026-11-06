@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sistema de controle de estacionamento do condomínio.">
+  <title>VagaCerta | Vagas cadastradas</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">V</span><span>Vaga<span class="brand-light">Certa</span></span></a>
+    <nav aria-label="Navegação principal">
+      <a class="nav-link active" href="index.html">Vagas cadastradas</a>
+      <a class="nav-link" href="disponiveis.html">Vagas disponíveis</a>
+      <a class="nav-link nav-cta" href="cadastro.html">+ Nova reserva</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="page-heading">
+      <div><p class="eyebrow">PAINEL DO CONDOMÍNIO</p><h1>Vagas cadastradas</h1><p class="subtitle">Consulte os veículos e as reservas registradas no estacionamento.</p></div>
+      <a class="button primary" href="cadastro.html">+ Cadastrar reserva</a>
+    </section>
+    <section class="stats-grid" aria-label="Resumo do estacionamento">
+      <article class="stat-card"><span class="stat-label">Total de vagas</span><strong id="total-vagas">12</strong><span class="stat-note">Vagas do condomínio</span></article>
+      <article class="stat-card"><span class="stat-label">Ocupadas</span><strong id="vagas-ocupadas">0</strong><span class="stat-note">Com reserva cadastrada</span></article>
+      <article class="stat-card"><span class="stat-label">Disponíveis</span><strong id="vagas-livres">0</strong><span class="stat-note">Aguardando reserva</span></article>
+    </section>
+    <section class="panel">
+      <div class="panel-heading"><div><h2>Reservas registradas</h2><p class="muted">Os dados abaixo são demonstrativos e podem ser alterados.</p></div>
+        <input id="busca" class="search-input" type="search" placeholder="Buscar placa, proprietário ou vaga..." aria-label="Buscar reservas">
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Vaga</th><th>Veículo</th><th>Proprietário</th><th>Apartamento</th><th>Bloco</th><th>Ação</th></tr></thead>
+          <tbody id="lista-reservas"></tbody>
+        </table>
+      </div>
+      <p id="mensagem-vazia" class="empty-state" hidden>Nenhuma reserva encontrada.</p>
+    </section>
+  </main>
+  <footer class="footer">VagaCerta <span>•</span> Projeto acadêmico de Desenvolvimento Web</footer>
+</body>
+</html>

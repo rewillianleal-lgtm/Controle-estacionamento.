@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulte as vagas livres no estacionamento.">
+  <title>VagaCerta | Vagas disponíveis</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">V</span><span>Vaga<span class="brand-light">Certa</span></span></a>
+    <nav aria-label="Navegação principal">
+      <a class="nav-link" href="index.html">Vagas cadastradas</a>
+      <a class="nav-link active" href="disponiveis.html">Vagas disponíveis</a>
+      <a class="nav-link nav-cta" href="cadastro.html">+ Nova reserva</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="page-heading"><div><p class="eyebrow">CONSULTA DE DISPONIBILIDADE</p><h1>Vagas disponíveis</h1><p class="subtitle">Visualize os espaços que ainda podem receber uma reserva.</p></div><a class="button primary" href="cadastro.html">+ Cadastrar reserva</a></section>
+    <section class="availability-banner"><div><span class="stat-label">Vagas livres no momento</span><strong id="quantidade-disponiveis">0</strong></div><span class="availability-indicator"><i></i> Disponibilidade atualizada</span></section>
+    <section class="panel"><div class="panel-heading"><div><h2>Mapa de vagas</h2><p class="muted">Selecione uma vaga livre para iniciar o cadastro.</p></div></div><div id="grade-vagas" class="parking-grid"></div><p id="sem-vagas" class="empty-state" hidden>Não há vagas disponíveis no momento.</p><div class="legend"><span><i class="legend-free"></i> Disponível</span><span><i class="legend-busy"></i> Ocupada</span></div></section>
+  </main>
+  <footer class="footer">VagaCerta <span>•</span> Projeto acadêmico de Desenvolvimento Web</footer>
+</body>
+</html>

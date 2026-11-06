@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cadastro de reserva de vaga no estacionamento.">
+  <title>VagaCerta | Nova reserva</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">V</span><span>Vaga<span class="brand-light">Certa</span></span></a>
+    <nav aria-label="Navegação principal">
+      <a class="nav-link" href="index.html">Vagas cadastradas</a>
+      <a class="nav-link" href="disponiveis.html">Vagas disponíveis</a>
+      <a class="nav-link nav-cta active" href="cadastro.html">+ Nova reserva</a>
+    </nav>
+  </header>
+  <main class="container narrow">
+    <section class="page-heading"><div><p class="eyebrow">ESTACIONAMENTO</p><h1>Cadastro de reserva</h1><p class="subtitle">Preencha os dados do morador e do veículo para registrar a vaga.</p></div></section>
+    <section class="panel form-panel">
+      <form id="form-cadastro">
+        <div class="form-section-title"><span class="section-number">01</span><div><h2>Dados do proprietário</h2><p class="muted">Identificação do morador responsável.</p></div></div>
+        <div class="form-grid">
+          <label class="field full">Nome do proprietário<input name="proprietario" type="text" maxlength="80" placeholder="Ex.: Maria Oliveira" required></label>
+          <label class="field">Número do apartamento<input name="apartamento" type="text" maxlength="10" placeholder="Ex.: 302" required></label>
+          <label class="field">Bloco do apartamento<input name="bloco" type="text" maxlength="10" placeholder="Ex.: A" required></label>
+        </div>
+        <div class="form-divider"></div>
+        <div class="form-section-title"><span class="section-number">02</span><div><h2>Dados do veículo</h2><p class="muted">Informações para identificação do automóvel.</p></div></div>
+        <div class="form-grid">
+          <label class="field">Placa do veículo<input name="placa" type="text" maxlength="7" minlength="7" placeholder="ABC1D23" pattern="[A-Za-z]{3}[0-9][A-Za-z0-9][0-9]{2}" title="Informe uma placa válida, no padrão antigo ou Mercosul." required></label>
+          <label class="field">Modelo do veículo<input name="modelo" type="text" maxlength="50" placeholder="Ex.: Honda Civic" required></label>
+          <label class="field">Cor do veículo<input name="cor" type="text" maxlength="30" placeholder="Ex.: Prata" required></label>
+          <label class="field">Número da vaga<select name="vaga" id="vaga-select" required><option value="">Selecione uma vaga disponível</option></select></label>
+        </div>
+        <div class="form-actions"><a class="button secondary" href="index.html">Cancelar</a><button class="button primary" type="submit">Salvar reserva</button></div>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">VagaCerta <span>•</span> Projeto acadêmico de Desenvolvimento Web</footer>
+</body>
+</html>
